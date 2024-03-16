@@ -74,12 +74,12 @@ Top owner: Tencent
 
 Пример запуска утилиты:
 ```bash
-bin/messengers.js __fixtures__/messengers.csv
-General top messenger: VK Messenger ВКонтакте, VK
-Download count: Max count: 1000, Min count: 23
-Top-3 Australia: Vider, Signal, LINE
-Top downloads: WhatsApp, Facebook Messenger, Telegram, Signal, Viber, Snapchat, WeChat, LINE
-Top owner: Tencent
+bin/job-resume.js __fixtures__/job-resume.csv
+Job seeker: John Doe, Junior JavaScript Developer
+Required stack: 4
+GitHub nickname: superProger3000
+Experience: 3 years 0 months
+Education: A place, B place, C place
 ```
 
 Каждая строчка в выводе утилиты, представляет собой небольшое отдельное вычислительное задание. Вам предстоит решать эти задачи по очереди. Ниже список этих заданий:
