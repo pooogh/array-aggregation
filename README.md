@@ -24,10 +24,48 @@
 Ваша задача написать консольную утилиту, которая анализирует переданные данные из таблицы и показывает статистику по этим данным. Файлы хранятся в директории *\_\_fixtures\_\_* в формате CSV. Они используются для тестов и понадобятся вам, для запуска и проверки утилиты в терминале. Вся информация уже прочитана и содержится в константе content. Вам остается только написать и экспортировать функцию в файле index.js, которая принимает данные в виде строки и работает с ними. Программа выводит строки в консоль, каждая строка является решением определенного шага. Таким образом 5 шагов предполагает 5 строк в консоли.
 
 Пример запуска утилиты:
+```bash
+bin/messengers.js __fixtures__/messengers.csv
+General top messenger: VK Messenger ВКонтакте, VK
+Download count: Max count: 1000, Min count: 23
+Top-3 Australia: Vider, Signal, LINE
+Top downloads: WhatsApp, Facebook Messenger, Telegram, Signal, Viber, Snapchat, WeChat, LINE
+Top owner: Tencent
+```
 
 Каждая строчка в выводе утилиты, представляет собой небольшое отдельное вычислительное задание. Вам предстоит решать эти задачи по очереди. Ниже список этих заданий:
 1. Выведите название приложения и название компании-разработчика для мессенджера, у которого самый высокий средний рейтинг в Google Play и App Store:
 ```bash
 bin/messengers.js __fixtures__/messengers.csv
-General top messenger: VK Messenger
+General top messenger: VK Messenger ВКонтакте, VK 
+```
+2. Выведите самое большое и самое маленькое количество скачиваний приложений в Индии:
+```bash
+bin/messengers.js __fixtures__/messengers.csv
+General top messenger: VK Messenger ВКонтакте, VK  # Не забывайте что предыдущее решение остается работать
+Download count: Max count: 1000, Min count: 23
+```
+3. Выведите топ-3 приложений по версии Google Play в Австралии:
+```bash
+bin/messengers.js __fixtures__/messengers.csv
+General top messenger: VK Messenger ВКонтакте, VK
+Download count: Max count: 1000, Min count: 23
+Top-3 Australia: Vider, Signal, LINE
+```
+4. Выведите список приложений в порядке возрастания среднего количетсва скачиваний по всем странам. *Среднее количество скачиваний* = Общее количество скачиваний приложения по всем странам / Количество стран
+```bash
+bin/messengers.js __fixtures__/messengers.csv
+General top messenger: VK Messenger ВКонтакте, VK
+Download count: Max count: 1000, Min count: 23
+Top-3 Australia: Vider, Signal, LINE
+Top downloads: WhatsApp, Facebook Messenger, Telegram, Signal, Viber, Snapchat, WeChat, LINE
+```
+5. Выведите название компании, которая владеет двумя или более приложениями из списка:
+```bash
+bin/messengers.js __fixtures__/messengers.csv
+General top messenger: VK Messenger ВКонтакте, VK
+Download count: Max count: 1000, Min count: 23
+Top-3 Australia: Vider, Signal, LINE
+Top downloads: WhatsApp, Facebook Messenger, Telegram, Signal, Viber, Snapchat, WeChat, LINE
+Top owner: Tencent
 ```
