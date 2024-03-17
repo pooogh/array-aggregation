@@ -26,7 +26,7 @@
 Пример запуска утилиты:
 ```bash
 bin/messengers.js __fixtures__/messengers.csv
-General top messenger: VK Messenger ВКонтакте, VK
+General top messenger: VK Messenger, Owner: ВКонтакте, VK 
 Download count: Max count: 1000, Min count: 23
 Top-3 Australia: Vider, Signal, LINE
 Top downloads: WhatsApp, Facebook Messenger, Telegram, Signal, Viber, Snapchat, WeChat, LINE
@@ -37,25 +37,25 @@ Top owner: Tencent
 1. Выведите название приложения и название компании-разработчика для мессенджера, у которого самый высокий средний рейтинг в Google Play и App Store:
 ```bash
 bin/messengers.js __fixtures__/messengers.csv
-General top messenger: VK Messenger ВКонтакте, VK 
+General top messenger: VK Messenger, Owner: ВКонтакте, VK 
 ```
 2. Выведите самое большое и самое маленькое количество скачиваний приложений в Индии:
 ```bash
 bin/messengers.js __fixtures__/messengers.csv
-General top messenger: VK Messenger ВКонтакте, VK  # Не забывайте что предыдущее решение остается работать
+General top messenger: VK Messenger, Owner: ВКонтакте, VK   # Не забывайте что предыдущее решение остается работать
 Download count: Max count: 1000, Min count: 23
 ```
-3. Выведите топ-3 приложений по версии Google Play в Австралии:
+3. Выведите в алфавитном порядке 3 самых популярных приложений в Австралии:
 ```bash
 bin/messengers.js __fixtures__/messengers.csv
-General top messenger: VK Messenger ВКонтакте, VK
+General top messenger: VK Messenger, Owner: ВКонтакте, VK 
 Download count: Max count: 1000, Min count: 23
 Top-3 Australia: Vider, Signal, LINE
 ```
 4. Выведите список приложений в порядке возрастания среднего количетсва скачиваний по всем странам. *Среднее количество скачиваний* = Общее количество скачиваний приложения по всем странам / Количество стран
 ```bash
 bin/messengers.js __fixtures__/messengers.csv
-General top messenger: VK Messenger ВКонтакте, VK
+General top messenger: VK Messenger, Owner: ВКонтакте, VK 
 Download count: Max count: 1000, Min count: 23
 Top-3 Australia: Vider, Signal, LINE
 Top downloads: WhatsApp, Facebook Messenger, Telegram, Signal, Viber, Snapchat, WeChat, LINE
@@ -63,7 +63,7 @@ Top downloads: WhatsApp, Facebook Messenger, Telegram, Signal, Viber, Snapchat, 
 5. Выведите название компании, которая владеет двумя или более приложениями из списка:
 ```bash
 bin/messengers.js __fixtures__/messengers.csv
-General top messenger: VK Messenger ВКонтакте, VK
+General top messenger: VK Messenger, Owner: ВКонтакте, VK 
 Download count: Max count: 1000, Min count: 23
 Top-3 Australia: Vider, Signal, LINE
 Top downloads: WhatsApp, Facebook Messenger, Telegram, Signal, Viber, Snapchat, WeChat, LINE
@@ -150,7 +150,7 @@ Awards: Rewards: 15, Nominations: 24
 Movies 2003: Плетёный человек, Покидая Лас-Вегас, Призрачный гонщик 2
 Rewards percent: 27%
 ```
-4. Выведите название фильма, за который актер получил больше всего наград и номинаций:
+4. Выведите название фильма, за который актер получил больше всего наград и номинаций. Если таких фильмов несколько, то выведите первый в алфавитном порядке:
 ```bash
 bin/actors.js __fixtures__/nicolas-cage.csv
 Awards: Rewards: 15, Nominations: 24
@@ -158,12 +158,12 @@ Movies 2003: Плетёный человек, Покидая Лас-Вегас, 
 Rewards percent: 27%
 Most successful movie: Сумасшедшая езда
 ```
-5. Выведите год, за который актер получил больше всего номинаций и наград, и год, за который актер получил меньше всего номинаций и наград:
+5. Выведите название премий, которые наминировали актера чаще всего и реже всего. Если таких премий несколько, то выведите первую в алфавитном порядке:
 ```bash
 bin/actors.js __fixtures__/nicolas-cage.csv
 Awards: Rewards: 15, Nominations: 24
 Movies 2003: Плетёный человек, Покидая Лас-Вегас, Призрачный гонщик 2
 Rewards percent: 27%
 Most successful movie: Сумасшедшая езда
-Annual counter: Success year: 1998, Bad year: 2008
+Awards statisctics: Award's pet: Премия Оскар, Award's outsider: Премия прайм-тайм Эмми
 ```
