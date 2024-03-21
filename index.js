@@ -1,15 +1,15 @@
 // task 1
-const tableParsing = (content) => {
+const tableParsing = (/* content */) => {
 
 };
 
 // task 2
-const candidateAssessment = (content) => {
+const candidateAssessment = (/* content */) => {
 
 };
 
 // task 3
-const actorRating = (content) => {
+const actorRating = (/* content */) => {
 
 };
 
