@@ -1,25 +1,31 @@
----
-    name: GitHub Classroom Workflow
-    
-    on:
-      push:
-        branches:
-          - main
-    
-    permissions:
-      checks: write
-      actions: read
-      contents: read
-    
-    jobs:
-      build:
-        name: Autograding
-        runs-on: self-hosted
-        if: github.actor != 'Bot'
-        steps:
-          - uses: actions/checkout@v3
-          - uses: actions/setup-node@v3
-            with:
-              node-version: 20
-              cache: 'npm'
-          - uses: education/autograding@v1
+name: Classroom workflow
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  classroom:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
+    - name: Install dependencies
+      run: make install
+
+    - name: Run lint
+      run: make lint
+
+    - name: Run tests
+      run: make test
+      
+    - uses: education/autograding@v1
+

@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "jest"
-  },
+    },
   "author": "",
   "license": "ISC",
   "bin": {
