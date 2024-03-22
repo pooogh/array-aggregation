@@ -21,4 +21,4 @@ jobs:
       run: make test
 
     - name: Calculate test score
-      run: echo ::set-output name=points::'{"points":0.5}'
+      run: echo ::set-output name=points::'{"points": 0.5}'
