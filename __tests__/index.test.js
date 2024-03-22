@@ -1,4 +1,4 @@
-import { fileURLToPath } from 'url';
+/* eslint-disable */
 import fs from 'fs';
 import path from 'path';
 import { tableParsing, candidateAssessment, actorRating } from '../index.js';
@@ -15,7 +15,7 @@ const contentTask3 = fs.readFileSync(filePathTask3, 'utf-8');
 const filePathTask3Check2 = path.join(__dirname, '..', '__fixtures__', 'leonardo-dicaprio.csv');
 const contentTask3Check2 = fs.readFileSync(filePathTask3Check2, 'utf-8');
 
-describe('Task 1: Messengers', () => {
+describe('Task 1 - Messengers', () => {
   const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
   tableParsing(contentTask1);
   const [q1, q2, q3, q4, q5] = consoleSpy.mock.calls.map((args) => args[0]);
@@ -37,7 +37,7 @@ describe('Task 1: Messengers', () => {
   consoleSpy.mockRestore();
 });
 
-describe('Task 2: Job resume', () => {
+describe('Task 2 - Job resume', () => {
   const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
   candidateAssessment(contentTask2);
   const [q1, q2, q3, q4, q5] = consoleSpy.mock.calls.map((args) => args[0]);
@@ -59,7 +59,7 @@ describe('Task 2: Job resume', () => {
   consoleSpy.mockRestore();
 });
 
-describe('Task 3: Actor rating - Nicolas Cage', () => {
+describe('Task 3 - Actor rating Nicolas Cage', () => {
   const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
   actorRating(contentTask3);
   const [q1, q2, q3, q4, q5] = consoleSpy.mock.calls.map((args) => args[0]);
@@ -81,7 +81,7 @@ describe('Task 3: Actor rating - Nicolas Cage', () => {
   consoleSpy.mockRestore();
 });
 
-describe('Task 3: Actor rating - Leonardo DiCaprio', () => {
+describe('Task 3 - Actor rating Leonardo DiCaprio', () => {
   const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
   actorRating(contentTask3Check2);
   const [q1, q2, q3, q4, q5] = consoleSpy.mock.calls.map((args) => args[0]);
