@@ -3,7 +3,7 @@ name: Classroom workflow
 on:
   push:
     branches:
-      - develop
+      - main
 
 jobs:
   classroom:
