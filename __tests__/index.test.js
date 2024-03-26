@@ -23,7 +23,7 @@ describe('Task 1 - Messengers', () => {
     expect(q1).toEqual('General top messenger: Signal, Owner: Signal Foundation');
   });
   test('Step 2', () => {
-    expect(q2).toEqual('Download count: Max count: 10000000, Min count: 5000000');
+    expect(q2).toEqual('Download count: Max count: 50000000, Min count: 5000000');
   });
   test('Step 3', () => {
     expect(q3).toEqual('Top-3 Australia: Facebook Messenger, Telegram, WhatsApp');
